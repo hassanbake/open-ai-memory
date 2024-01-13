@@ -11,7 +11,8 @@ def main():
     load_dotenv()
     
     # Test out api key
-    if os.environ.get("OPENAI_API_KEY") is None or os.environ.get("OPENAI_API_KEY")=="":
+    OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+    if OPENAI_API_KEY is None or OPENAI_API_KEY=="":
         print("Please add you OpenAI key to .env")
         exit(1)
     else:
